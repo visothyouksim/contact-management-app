@@ -16,10 +16,10 @@ Pour installer et exécuter ce projet localement, suivez les étapes ci-dessous 
 
 ### Prérequis
 
-- Node.js (version 12 ou supérieure)
-- npm (version 6 ou supérieure) ou yarn (version 1 ou supérieure)
-- Angular CLI (version 11 ou supérieure)
-- Ionic CLI (version 5 ou supérieure)
+- Node.js (21.7.1)
+- npm (10.8.1)
+- Angular CLI (18.1.1)
+- Ionic CLI (7.2.0)
 
 ### Étapes d'Installation
 
