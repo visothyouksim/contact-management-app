@@ -26,7 +26,7 @@ Pour installer et exécuter ce projet localement, suivez les étapes ci-dessous 
 1. **Clonez le dépôt GitHub :**
 
    ```bash
-   git clone https://github.com/votre-utilisateur/gestion-de-contact.git](https://github.com/visothyouksim/contact-management-app.git
+   git clone https://github.com/visothyouksim/contact-management-app.git
 
 2. **Naviguez dans le répertoire du projet :**
    ```bash
