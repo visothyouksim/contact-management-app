@@ -10,7 +10,9 @@ import { Contact } from './models/contact.model';
 export class AppComponent implements OnInit {
   contactForm: FormGroup;
   contacts: Contact[] = [];
+  filteredContacts: Contact[] = [];
   selectedContact: Contact | null = null;
+  searchText: string = '';
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -32,12 +34,14 @@ export class AppComponent implements OnInit {
       this.contacts.push(newContact);
       this.saveContacts();
       this.contactForm.reset();
+      this.filterContacts();
     }
   }
 
   supprimerContact(index: number) {
     this.contacts.splice(index, 1);
     this.saveContacts();
+    this.filterContacts();
   }
 
   selectContact(contact: Contact) {
@@ -52,6 +56,19 @@ export class AppComponent implements OnInit {
     const storedContacts = localStorage.getItem('contacts');
     if (storedContacts) {
       this.contacts = JSON.parse(storedContacts);
+      this.filterContacts();
     }
+  }
+
+  filterContacts() {
+    this.filteredContacts = this.contacts.filter(contact =>
+      contact.nom.toLowerCase().includes(this.searchText.toLowerCase()) ||
+      contact.prenom.toLowerCase().includes(this.searchText.toLowerCase())
+    );
+  }
+
+  onSearchChange(event: any) {
+    this.searchText = event.target.value;
+    this.filterContacts();
   }
 }
