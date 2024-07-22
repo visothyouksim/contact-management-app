@@ -52,18 +52,23 @@ Cette commande démarrera un serveur de développement et ouvrira l'application 
 ### Fonctionnalités Principales
 
 1. Ajouter un Contact
+   
 Vous pouvez ajouter un nouveau contact en remplissant le formulaire de la section "Ajouter un contact" et en cliquant sur le bouton "Ajouter".
 
 2. Modifier un Contact
+   
 Séléctionnez un contact. Pour modifier un contact existant, cliquez sur le bouton de modification à côté des détails du contact. Cela vous redirigera vers une page de modification où vous pourrez mettre à jour les informations du contact et cliquer sur "Modifier" pour enregistrer les modifications. Un bouton "Annuler" est également présent pour revenir à la page principale sans enregistrer les modifications.
 
 3. Supprimer un Contact
+   
 Pour supprimer un contact, cliquez sur le bouton de suppression (icône de cercle avec une croix) à côté du contact dans la liste.
 
 4. Rechercher des Contacts
+   
 Utilisez la barre de recherche en haut de la liste des contacts pour filtrer les contacts en fonction du nom ou du prénom.
 
 5. Sauvegarde Locale
+    
 Les contacts sont sauvegardés localement dans le navigateur via localStorage. Ainsi, vos contacts seront disponibles même après avoir fermé et rouvert l'application.
 
 ### Structure du Projet
