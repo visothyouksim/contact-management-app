@@ -20,11 +20,11 @@
           </ion-item>
           <div class="ion-padding" slot="content">
               <form [formGroup]="contactForm" (ngSubmit)="ajouterContact()">
-                <ion-input formControlName="nom" label="Nom" label-placement="floating" fill="solid" placeholder="Entrez un nom"></ion-input>
-                <ion-input formControlName="prenom" label="Prénom" label-placement="floating" fill="solid" placeholder="Entrez un prénom"></ion-input>
-                <ion-input formControlName="email" label="Email" label-placement="floating" fill="solid" placeholder="Entrez un email"></ion-input>
-                <ion-input formControlName="telephone" label="Téléphone" label-placement="floating" fill="solid" placeholder="Entrez un n° de téléphone"></ion-input>
-                <ion-input formControlName="adresse" label="Adresse complète" label-placement="floating" fill="solid" placeholder="Entrez une adresse"></ion-input>
+                <ion-input class="transparent-input" formControlName="nom" label="Nom" label-placement="floating" fill="solid" placeholder="Entrez un nom"></ion-input>
+                <ion-input class="transparent-input" formControlName="prenom" label="Prénom" label-placement="floating" fill="solid" placeholder="Entrez un prénom"></ion-input>
+                <ion-input class="transparent-input" formControlName="email" label="Email" label-placement="floating" fill="solid" placeholder="Entrez un email"></ion-input>
+                <ion-input class="transparent-input" formControlName="telephone" label="Téléphone" label-placement="floating" fill="solid" placeholder="Entrez un n° de téléphone"></ion-input>
+                <ion-input class="transparent-input" formControlName="adresse" label="Adresse complète" label-placement="floating" fill="solid" placeholder="Entrez une adresse"></ion-input>
                 <div class="ion-padding">
                   <div class="centered-content">
                     <ion-button color="success" type="submit">Ajouter</ion-button>

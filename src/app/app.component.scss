@@ -2,28 +2,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
 ion-list-header {
     --background: #f2a94a;
     --color: #fff;
-  
+
     --border-width: 0 0 4px 0;
     --border-color: #ffffff;
     --border-style: double;
-  }
+}
 
-  .contactDetails {
+.contactDetails {
     --background: #7af24a;
     --color: #fff;
-  
+
     --border-width: 0 0 4px 0;
     --border-color: #ffffff;
     --border-style: double;
-  }
+}
 
-  .flex-container {
+.flex-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
+
+ion-list {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+ion-item {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.transparent-input {
+    --background: rgba(255, 255, 255, 0.7);
+}
+
+.list-md {
+    padding: 0;
+}
