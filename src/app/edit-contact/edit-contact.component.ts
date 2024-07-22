@@ -24,7 +24,7 @@ export class EditContactComponent implements OnInit {
       telephone: [''],
       adresse: ['']
     });
-    
+
     this.contact = history.state.contact || { nom: '', prenom: '', email: '', telephone: '', adresse: '' };
   }
 
@@ -45,5 +45,9 @@ export class EditContactComponent implements OnInit {
       }
       this.router.navigateByUrl('/');
     }
+  }
+
+  annulerModification() {
+    this.router.navigateByUrl('/');
   }
 }
