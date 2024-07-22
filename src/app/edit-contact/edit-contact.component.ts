@@ -24,9 +24,7 @@ export class EditContactComponent implements OnInit {
       telephone: [''],
       adresse: ['']
     });
-
-    // Vérification de la réception des données
-    console.log('Received state:', history.state);
+    
     this.contact = history.state.contact || { nom: '', prenom: '', email: '', telephone: '', adresse: '' };
   }
 
@@ -39,7 +37,6 @@ export class EditContactComponent implements OnInit {
   modifierContact() {
     if (this.editContactForm.valid) {
       const updatedContact = this.editContactForm.value;
-      // Sauvegarder les modifications (par exemple, localStorage, service, etc.)
       const contacts = JSON.parse(localStorage.getItem('contacts') || '[]');
       const index = contacts.findIndex((c: Contact) => c.nom === this.contact.nom && c.prenom === this.contact.prenom);
       if (index !== -1) {
