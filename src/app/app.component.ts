@@ -10,6 +10,7 @@ import { Contact } from './models/contact.model';
 export class AppComponent {
   contactForm: FormGroup;
   contacts: Contact[] = [];
+  selectedContact: Contact | null = null;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -31,5 +32,9 @@ export class AppComponent {
 
   supprimerContact(index: number) {
     this.contacts.splice(index, 1);
+  }
+
+  selectContact(contact: Contact) {
+    this.selectedContact = contact;
   }
 }
