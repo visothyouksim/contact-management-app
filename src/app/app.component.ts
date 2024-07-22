@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Contact } from './models/contact.model';
 
 @Component({
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit {
   selectedContact: Contact | null = null;
   searchText: string = '';
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.contactForm = this.fb.group({
       nom: ['', Validators.required],
       prenom: ['', Validators.required],
@@ -70,5 +71,14 @@ export class AppComponent implements OnInit {
   onSearchChange(event: any) {
     this.searchText = event.target.value;
     this.filterContacts();
+  }
+
+  editContact() {
+    if (this.selectedContact) {
+      console.log('Navigating to edit page with contact:', this.selectedContact);
+      this.router.navigate(['/edit-contact'], { state: { contact: this.selectedContact } });
+    } else {
+      console.log('No contact selected');
+    }
   }
 }

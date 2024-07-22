@@ -1,0 +1,25 @@
+
+
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>
+    <ion-list-header>
+      <ion-label>Modifier le contact</ion-label>
+    </ion-list-header>
+    <form [formGroup]="editContactForm" (ngSubmit)="modifierContact()">
+      <ion-input class="transparent-input" formControlName="nom" label="Nom" label-placement="floating" fill="solid" placeholder="Entrez un nom"></ion-input>
+      <ion-input class="transparent-input" formControlName="prenom" label="Prénom" label-placement="floating" fill="solid" placeholder="Entrez un prénom"></ion-input>
+      <ion-input class="transparent-input" formControlName="email" label="Email" label-placement="floating" fill="solid" placeholder="Entrez un email"></ion-input>
+      <ion-input class="transparent-input" formControlName="telephone" label="Téléphone" label-placement="floating" fill="solid" placeholder="Entrez un n° de téléphone"></ion-input>
+      <ion-input class="transparent-input" formControlName="adresse" label="Adresse complète" label-placement="floating" fill="solid" placeholder="Entrez une adresse"></ion-input>
+      <div class="ion-padding">
+        <div class="centered-content">
+          <ion-button color="primary" type="submit">Modifier</ion-button>
+        </div>
+      </div>
+    </form>
+  </ion-list>
+    
+  </div>
+</ion-content>
