@@ -105,12 +105,15 @@ Voici un aperçu de la structure du projet :
 ### Explications des Composants
 
 1. AppComponent
+   
 Le composant principal de l'application qui gère l'ajout, la suppression, la sélection et la recherche de contacts. Il contient le formulaire d'ajout de contact et la liste des contacts.
 
 2. EditContactComponent
+
 Le composant de modification de contact qui permet de mettre à jour les informations d'un contact existant. Il utilise le même modèle de formulaire que pour l'ajout de contact et redirige vers la page principale après la modification ou l'annulation.
 
 3. Contact Model
+
 Le modèle de données pour les contacts, situé dans src/app/models/contact.model.ts.
 
     ```bash
