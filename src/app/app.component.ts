@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   filteredContacts: Contact[] = [];
   selectedContact: Contact | null = null;
   searchText: string = '';
+  isSearching: boolean = false;
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.contactForm = this.fb.group({
@@ -66,15 +67,23 @@ export class AppComponent implements OnInit {
       contact.nom.toLowerCase().includes(this.searchText.toLowerCase()) ||
       contact.prenom.toLowerCase().includes(this.searchText.toLowerCase())
     );
+
+    if (this.filteredContacts.length > 0) {
+      this.selectedContact = this.filteredContacts[0];
+    } else {
+      this.selectedContact = null;
+    }
   }
 
   onSearchChange(event: any) {
     this.searchText = event.target.value;
+    this.isSearching = this.searchText.length > 0;
     this.filterContacts();
   }
 
   editContact() {
     if (this.selectedContact) {
+      console.log('Navigating to edit page with contact:', this.selectedContact);
       this.router.navigate(['/edit-contact'], { state: { contact: this.selectedContact } });
     } else {
       console.log('No contact selected');
