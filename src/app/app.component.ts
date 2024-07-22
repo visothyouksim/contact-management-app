@@ -75,7 +75,6 @@ export class AppComponent implements OnInit {
 
   editContact() {
     if (this.selectedContact) {
-      console.log('Navigating to edit page with contact:', this.selectedContact);
       this.router.navigate(['/edit-contact'], { state: { contact: this.selectedContact } });
     } else {
       console.log('No contact selected');
