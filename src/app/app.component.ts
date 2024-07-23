@@ -80,4 +80,8 @@ export class AppComponent implements OnInit {
       console.log('No contact selected');
     }
   }
+
+  doRefresh(event: any) {
+    window.location.reload();
+  }
 }
